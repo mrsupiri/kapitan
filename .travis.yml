@@ -43,8 +43,8 @@ script:
   - make build_binary
   - make test_binary
 
-after_success:
-  - if [ "$TRAVIS_PULL_REQUEST" = "false" ] && [ "$TRAVIS_BRANCH" = "master" ]; then bash ./scripts/inc_version.sh; fi
+# after_success:
+#   - if [ "$TRAVIS_PULL_REQUEST" = "false" ] && [ "$TRAVIS_BRANCH" = "aru-test" ]; then bash ./scripts/inc_version.sh; fi
 
 before_deploy:
   - export PRERELEASE=false
